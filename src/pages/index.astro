@@ -1,158 +1,63 @@
 ---
-import Card from '../components/ui/Card.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import { sessionData } from '../data/sessions';
 ---
 
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tea Party Memento</title>
-</head>
-<body>
-  <div class="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 p-4 md:p-8 relative overflow-hidden">
-    <div id="snowfall" class="fixed inset-0 pointer-events-none overflow-hidden">
-      {Array.from({ length: 30 }).map((_, i) => (
-        <div 
-          class="absolute animate-snowfall"
-          style={{
-            left: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 5}s`,
-            animationDuration: `${Math.random() * 3 + 7}s`,
-            fontSize: `${Math.random() * 15 + 15}px`,
-            color: 'rgba(255, 255, 255, 0.8)',
-            textShadow: '0 0 5px rgba(0,0,0,0.1)'
-          }}
-        >
-          ❆
-        </div>
-      ))}
-    </div>
-
-    <div class="max-w-2xl mx-auto space-y-8 py-8">
+<MainLayout title="Tea Party Memento" activeSession="" showSidebar={false}>
+  <div class="min-h-screen bg-[#faf9f7] dark:bg-[#1a1a1a] relative overflow-hidden transition-colors duration-700">
+    <div class="max-w-5xl mx-auto px-6 py-20 relative z-10">
       <!-- Header -->
-      <div class="text-center space-y-2">
-        <h1 class="text-4xl font-bold text-gray-800 font-['Playfair_Display']">
-          Sipping Into the New Year:<br />
-          Tea, Sound, and Breath
+      <div class="max-w-2xl mx-auto text-center mb-20">
+        <h1>
+          <span class="block text-sm uppercase tracking-[0.2em] text-[#94908d] dark:text-[#666] mb-4">
+            A Mindful Journey
+          </span>
+          <span class="block text-4xl md:text-5xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light tracking-tight leading-tight">
+            Sipping Into the New Year
+          </span>
         </h1>
-        <p class="text-xl text-gray-600 mt-4 font-['Playfair_Display']">
-          Personalized Meditation for Laura
-        </p>
-        <div class="pt-2 font-['Playfair_Display']">
-          <p class="text-gray-500">
-            Sunday, January 5, 2025
+        
+        <div class="mt-12 text-[#666] dark:text-[#999]">
+          <p class="text-lg font-light leading-relaxed">
+            To our amazing community, thank you for showing up with courage, grace, and creativity to this experience. As a thank you, we've created a collection of personalized meditations to help each of you bring forth your intentions for 2025.
           </p>
-          <p class="text-gray-500">
-            7:00pm – 9:30pm
+          <p class="mt-8 font-light italic">
+            With gratitude,<br/>
+            <span class="signature text-xl mt-2 block">Hannah, Laura, and James</span>
           </p>
         </div>
       </div>
 
-      <!-- Main Image Card -->
-      <Card className="bg-white border-none shadow-sm">
-        <div class="p-6">
-          <img 
-            src="https://i.ibb.co/TY18WFD/screenshot-20250105-012404.png" 
-            alt="Kaleidoscopic rainbow landscape"
-            class="w-full aspect-[2/1] object-cover rounded"
-
-          />
-        </div>
-      </Card>
-
-      <!-- Intention Card -->
-      <Card className="bg-white border-none shadow-sm">
-        <div class="p-6 space-y-4">
-          <h2 class="text-xl font-medium text-gray-800 font-['Playfair_Display']">Your Intention</h2>
-          <p class="text-gray-600 italic font-['Playfair_Display']">
-            My intention for this year is to be more present, absorb more beauty, 
-            and be more in tune with what life has to offer.
-          </p>
-        </div>
-      </Card>
-
-      <!-- Prompt Card -->
-      <Card className="bg-white border-none shadow-sm">
-        <div class="p-6 space-y-4">
-          <h2 class="text-xl font-medium text-gray-800 font-['Playfair_Display']">Visualization</h2>
-          <p class="text-gray-600 italic font-['Playfair_Display']">
-            A kaleidoscopic burst of rainbow colors explodes across a dreamy landscape, 
-            swirling paint-like streams flowing through luminous clouds, soft prismatic 
-            waterfalls cascading through floating orbs of light, ethereal atmosphere, 
-            cinematic lighting
-          </p>
-        </div>
-      </Card>
-
-      <!-- Meditation -->
-      <Card className="bg-white border-none shadow-sm">
-        <div class="p-6 space-y-4">
-          <h2 class="text-xl font-medium text-gray-800 font-['Playfair_Display']">Your Personalized Meditation</h2>
-          <div class="space-y-4 text-gray-600 font-['Playfair_Display']">
-            <p>Find a comfortable position and take a deep breath in... and out...</p>
-            
-            <p>Imagine yourself standing before this magnificent landscape of infinite colors. 
-              Each breath draws you deeper into this sacred space where rainbows dance and 
-              light flows like water.</p>
-
-            <p>As you breathe in, envision yourself absorbing the vibrant energies before you - 
-              the deep purples of wisdom, the blues of tranquility, the greens of growth, 
-              the yellows of joy, the oranges of creativity, and the reds of vitality.</p>
-
-            <p>With each exhale, feel yourself becoming more present, more aware, more alive. 
-              Watch how the colors swirl and blend, teaching us that life isn't rigid or 
-              fixed - it's fluid, ever-changing, full of unexpected beauty.</p>
-
-            <p>Like these ethereal waterfalls, sometimes we need to let ourselves flow, to 
-              surrender to the present moment rather than trying to control it.</p>
-
-            <p>Notice how each color has its place in this symphony of light. Just as this 
-              landscape holds space for every shade and hue, allow yourself to embrace all 
-              of life's experiences - the bright moments that dazzle us, the subtle tones 
-              that whisper wisdom, and even the darker shades that help us grow.</p>
-
-            <p>As you continue breathing deeply, set your intention to approach this year 
-              with the same openness that you're feeling now. Like these swirling lights 
-              and colors, life is constantly offering us moments of magic and beauty. 
-              They're always there - our task is simply to be present enough to witness them.</p>
-
-            <p>Take one final deep breath, filling yourself with this rainbow of possibilities. 
-              Carry this image in your heart as a reminder to pause, to notice, to absorb 
-              the beauty that surrounds you every day.</p>
-
-            <p>When you're ready, slowly open your eyes, knowing that this sense of wonder 
-              and presence is always available to you, waiting to be discovered in each new moment.</p>
-          </div>
-        </div>
-      </Card>
-
-      <!-- Footer -->
-      <div class="text-center text-gray-500 font-['Playfair_Display'] text-sm pt-8">
-        Imagined by <a href="https://withetherea.com" class="hover:text-gray-700 underline decoration-dotted">ETHEREA</a>
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {Object.entries(sessionData).map(([key, session]) => (
+          <a href={`/${key}`} class="group">
+            <div class="relative overflow-hidden rounded-lg">
+              <img 
+                src={session.image} 
+                alt={`Meditation for ${session.name}`}
+                class="w-full aspect-[4/3] object-cover transform transition duration-500 group-hover:scale-105"
+              />
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                <div class="absolute bottom-0 left-0 right-0 p-5">
+                  <h2 class="text-white text-xl font-medium mb-2">{session.tagline}</h2>
+                  <p class="text-white/90 text-sm font-light leading-relaxed">
+					{session.name}  
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   </div>
+</MainLayout> 
 
-  <style>
-    @keyframes snowfall {
-      0% {
-        transform: translateY(-20px) rotate(0deg);
-        opacity: 0;
-      }
-      10% {
-        opacity: 1;
-      }
-      90% {
-        opacity: 0.8;
-      }
-      100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-      }
-    }
-    .animate-snowfall {
-      animation: snowfall linear infinite;
-    }
-  </style>
-</body>
-</html>
+<style>
+  .signature {
+    font-family: 'Playfair Display', serif;
+    @apply text-[#2d2d2d] dark:text-[#f0f0f0];
+  }
+</style> 

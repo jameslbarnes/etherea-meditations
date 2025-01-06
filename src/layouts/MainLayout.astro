@@ -1,0 +1,115 @@
+---
+interface Props {
+  title: string;
+  activeSession?: string;
+  showSidebar?: boolean;
+}
+
+const { title, activeSession, showSidebar = true } = Astro.props;
+
+const sessions = [
+  { id: 'speaker2', name: 'Speaker 2', tagline: 'Build stages for hundreds', date: 'Jan 5, 2025' },
+  { id: 'ari', name: 'Ari', tagline: 'Mindset of contentment', date: 'Jan 5, 2025' },
+  { id: 'speaker4', name: 'Speaker 4', tagline: 'Love, empowerment, growth', date: 'Jan 5, 2025' },
+  { id: 'speaker5', name: 'Speaker 5', tagline: 'Mako Lako TED talk', date: 'Jan 5, 2025' },
+  { id: 'camille', name: 'Camille', tagline: 'Presence and positivity', date: 'Jan 5, 2025' },
+  { id: 'speaker7', name: 'Speaker 7', tagline: 'Extending boundaries', date: 'Jan 5, 2025' },
+  { id: 'michelle', name: 'Michelle', tagline: 'Service and light', date: 'Jan 5, 2025' },
+  { id: 'speaker9', name: 'Speaker 9', tagline: 'Listen to myself', date: 'Jan 5, 2025' },
+  { id: 'speaker10', name: 'Speaker 10', tagline: 'Body wisdom', date: 'Jan 5, 2025' },
+  { id: 'juanita', name: 'Juanita', tagline: 'Building connections', date: 'Jan 5, 2025' },
+
+];
+---
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Mobile hamburger menu -->
+  <button
+    id="menuButton"
+    class={`md:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-white shadow-md ${!showSidebar ? 'hidden' : ''}`}
+    aria-label="Toggle menu"
+  >
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+  <!-- Mobile menu overlay -->
+  <div
+    id="mobileMenu"
+    class={`fixed inset-0 bg-gray-800 bg-opacity-50 z-40 hidden md:hidden ${!showSidebar ? 'hidden' : ''}`}
+    onclick="this.classList.add('hidden')"
+  >
+    <div
+      class="fixed inset-y-0 left-0 w-64 bg-white shadow-xl"
+      onclick="event.stopPropagation()"
+    >
+      <div class="sticky top-0 bg-white p-4 border-b border-gray-200 z-10">
+        <h2 class="text-xl font-bold text-gray-800 font-['Playfair_Display']">Meditation Sessions</h2>
+      </div>
+      <div class="h-[calc(100vh-5rem)] overflow-y-auto">
+        <nav>
+          <ul class="space-y-1">
+            {sessions.map(session => (
+              <li>
+                <a
+                  href={`/${session.id}`}
+                  class={`block px-4 py-2 text-gray-600 hover:bg-blue-50 ${activeSession === session.id ? 'bg-blue-50' : ''}`}
+                >
+                  <div class="font-['Playfair_Display']">{session.tagline}</div>
+                  <div class="text-sm text-gray-500">{session.name}</div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Desktop Sidebar -->
+  <aside class={`hidden md:block w-64 fixed inset-y-0 left-0 bg-white border-r border-gray-200 ${!showSidebar ? 'hidden' : ''}`}>
+    <div class="p-4 bg-white border-b border-gray-200">
+      <h2 class="text-xl font-bold text-gray-800 font-['Playfair_Display']">Intentions</h2>
+    </div>
+    <nav>
+      <ul class="space-y-1">
+        {sessions.map(session => (
+          <li>
+            <a
+              href={`/${session.id}`}
+              class={`block px-4 py-2 text-gray-600 hover:bg-blue-50 ${activeSession === session.id ? 'bg-blue-50' : ''}`}
+            >
+              <div class="font-['Playfair_Display']">{session.tagline}</div>
+              <div class="text-sm text-gray-500">{session.name}</div>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class={showSidebar ? 'md:pl-64' : ''}>
+    <slot />
+  </main>
+
+  <script>
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuButton?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

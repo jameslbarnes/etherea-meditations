@@ -1,0 +1,79 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Card from '../components/ui/Card.astro';
+import { sessionData } from '../data/sessions';
+
+export function getStaticPaths() {
+  return Object.keys(sessionData).map(session => ({
+    params: { session }
+  }));
+}
+
+const { session } = Astro.params;
+const currentSession = sessionData[session];
+
+if (!currentSession) {
+  return Astro.redirect('/404');
+}
+---
+
+<MainLayout title={`${session} Meditation`} activeSession={session}>
+  <div class="min-h-screen bg-[#faf9f7] dark:bg-[#1a1a1a] relative overflow-hidden transition-colors duration-700">
+    <div class="max-w-3xl mx-auto px-6 py-20">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <span class="block text-sm uppercase tracking-[0.2em] text-[#94908d] dark:text-[#666] mb-4">
+          A Mindful Journey
+        </span>
+        <h1 class="text-4xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light tracking-tight leading-tight mb-3">
+          {currentSession.tagline}
+        </h1>
+        <p class="text-lg text-[#666] dark:text-[#999] font-light">
+            {currentSession.name}
+        </p>
+      </div>
+
+      <!-- Main Image -->
+      <div class="mb-16">
+        <div class="relative overflow-hidden rounded-lg">
+          <img 
+            src={currentSession.image} 
+            alt={`Meditation for ${currentSession.name}`}
+            class="w-full aspect-[3/2] object-cover"
+          />
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="space-y-16 max-w-2xl mx-auto">
+        <!-- Intention -->
+        <div class="space-y-4">
+          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Your Intention</h2>
+          <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
+            {currentSession.intention}
+          </p>
+        </div>
+
+        <!-- Visualization -->
+        <div class="space-y-4">
+          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Visualization</h2>
+          <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
+            {currentSession.visualization}
+          </p>
+        </div>
+
+        <!-- Meditation -->
+        <div class="space-y-4">
+          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Your Personalized Meditation</h2>
+          <div class="space-y-6">
+            {currentSession.meditation.map(paragraph => (
+              <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</MainLayout>
