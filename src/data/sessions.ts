@@ -13,8 +13,8 @@ export type SessionData = {
   
   export const sessionData: SessionData = {
    
-  speaker2: {
-    name: "Speaker 2",
+  gal: {
+    name: "Gal",
     tagline: "Build stages for hundreds",
     date: "Sunday, January 5",
     time: "7:00pm – 9:30pm",
@@ -43,8 +43,8 @@ export type SessionData = {
       "This is your natural state - not striving for more, but resting in the deep knowing that you are, and have, enough."
     ]
   },
-  speaker4: {
-    name: "Speaker 4",
+  anthony: {
+    name: "Anthony",
     tagline: "Love, empowerment, growth",
     date: "Sunday, January 5",
     time: "7:00pm – 9:30pm",
@@ -58,8 +58,8 @@ export type SessionData = {
       "Finally, walk through the doorway of growth. Every mistake, every misstep, every moment of learning glows like a star in your path. These aren't failures - they're the very steps that make your journey unique. Honor them."
     ]
   },
-  speaker5: {
-    name: "Speaker 5",
+  diana: {
+    name: "Diana",
     tagline: "Mako Lako TED talk",
     date: "Sunday, January 5",
     time: "7:00pm – 9:30pm",
@@ -133,8 +133,8 @@ export type SessionData = {
       "You are not abandoning responsibility - you are responding to your highest calling."
     ]
   },
-  speaker10: {
-    name: "Speaker 10",
+  ashley: {
+    name: "Ashley",
     tagline: "The unthought known",
     date: "Sunday, January 5",
     time: "7:00pm – 9:30pm",
