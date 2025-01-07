@@ -33,7 +33,7 @@ if (!currentSession) {
         </p>
       </div>
 
-      <!-- Main Image -->
+      <!-- Main Image and Visualization Caption -->
       <div class="mb-16">
         <div class="relative overflow-hidden rounded-lg">
           <img 
@@ -42,23 +42,18 @@ if (!currentSession) {
             class="w-full aspect-[3/2] object-cover"
           />
         </div>
+        <p class="mt-4 text-lg text-[#666] dark:text-[#999] font-light leading-relaxed italic text-center">
+          {currentSession.visualization}
+        </p>
       </div>
 
       <!-- Content -->
       <div class="space-y-16 max-w-2xl mx-auto">
         <!-- Intention -->
         <div class="space-y-4">
-          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Your Intention</h2>
+          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Intention</h2>
           <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
             {currentSession.intention}
-          </p>
-        </div>
-
-        <!-- Visualization -->
-        <div class="space-y-4">
-          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Visualization</h2>
-          <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
-            {currentSession.visualization}
           </p>
         </div>
 
