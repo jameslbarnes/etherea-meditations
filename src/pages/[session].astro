@@ -42,7 +42,7 @@ if (!currentSession) {
             class="w-full aspect-[3/2] object-cover"
           />
         </div>
-        <p class="mt-4 text-lg text-[#666] dark:text-[#999] font-light leading-relaxed italic text-center">
+        <p class="mt-4 text-md text-[#666] dark:text-[#999] font-light leading-relaxed italic text-center">
           {currentSession.visualization}
         </p>
       </div>
@@ -51,7 +51,7 @@ if (!currentSession) {
       <div class="space-y-16 max-w-2xl mx-auto">
         <!-- Intention -->
         <div class="space-y-4">
-          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Intention</h2>
+          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">{currentSession.name}'s Intention</h2>
           <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
             {currentSession.intention}
           </p>
@@ -59,7 +59,7 @@ if (!currentSession) {
 
         <!-- Meditation -->
         <div class="space-y-4">
-          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Your Personalized Meditation</h2>
+          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">{currentSession.name}'s Meditation</h2>
           <div class="space-y-6">
             {currentSession.meditation.map(paragraph => (
               <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
