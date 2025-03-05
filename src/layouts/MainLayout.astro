@@ -1,4 +1,6 @@
 ---
+import { sessionData } from '../data/sessions';
+
 interface Props {
   title: string;
   activeSession?: string;
@@ -8,17 +10,13 @@ interface Props {
 const { title, activeSession, showSidebar = true } = Astro.props;
 
 const sessions = [
-  { id: 'gal', name: 'Gal', tagline: 'Build stages for hundreds', date: 'Jan 5, 2025' },
-  { id: 'ari', name: 'Ari', tagline: 'Mindset of contentment', date: 'Jan 5, 2025' },
-  { id: 'anthony', name: 'Anthony', tagline: 'Love, empowerment, growth', date: 'Jan 5, 2025' },
-  { id: 'diana', name: 'Diana', tagline: 'Mako Lako TED talk', date: 'Jan 5, 2025' },
-  { id: 'camille', name: 'Camille', tagline: 'Presence and positivity', date: 'Jan 5, 2025' },
-  { id: 'speaker7', name: 'Speaker 7', tagline: 'Extending boundaries', date: 'Jan 5, 2025' },
-  { id: 'michelle', name: 'Michelle', tagline: 'Service and light', date: 'Jan 5, 2025' },
-  { id: 'speaker9', name: 'Speaker 9', tagline: 'Listen to myself', date: 'Jan 5, 2025' },
-  { id: 'ashley', name: 'Ashley', tagline: 'The unthought known', date: 'Jan 5, 2025' },
-  { id: 'juanita', name: 'Juanita', tagline: 'Building connections', date: 'Jan 5, 2025' },
-
+  { id: 'james', name: 'James', tagline: 'Seeing reality clearly', date: sessionData.james.date },
+  { id: 'andrew', name: 'Andrew', tagline: 'Wellness, sobriety, and love', date: sessionData.andrew.date },
+  { id: 'max', name: 'Max', tagline: 'Sustainable balance', date: sessionData.max.date },
+  { id: 'mike', name: 'Mike', tagline: 'Presence through transition', date: sessionData.mike.date },
+  { id: 'seth', name: 'Seth', tagline: 'Integration and self-commitment', date: sessionData.seth.date },
+  { id: 'david', name: 'David', tagline: 'Grounded purpose', date: sessionData.david.date },
+  { id: 'justin', name: 'Justin', tagline: 'Self-compassion and fulfillment', date: sessionData.justin.date },
 ];
 ---
 
@@ -54,7 +52,7 @@ const sessions = [
       onclick="event.stopPropagation()"
     >
       <div class="sticky top-0 bg-white p-4 border-b border-gray-200 z-10">
-        <h2 class="text-xl font-bold text-gray-800 font-['Playfair_Display']">Meditation Sessions</h2>
+        <h2 class="text-xl font-bold text-gray-800 font-['Playfair_Display']">Men's Group Members</h2>
       </div>
       <div class="h-[calc(100vh-5rem)] overflow-y-auto">
         <nav>
@@ -79,7 +77,7 @@ const sessions = [
   <!-- Desktop Sidebar -->
   <aside class={`hidden md:block w-64 fixed inset-y-0 left-0 bg-white border-r border-gray-200 ${!showSidebar ? 'hidden' : ''}`}>
     <div class="p-4 bg-white border-b border-gray-200">
-      <h2 class="text-xl font-bold text-gray-800 font-['Playfair_Display']">Intentions</h2>
+      <h2 class="text-xl font-bold text-gray-800 font-['Playfair_Display']">Our Intentions</h2>
     </div>
     <nav>
       <ul class="space-y-1">
@@ -89,8 +87,8 @@ const sessions = [
               href={`/${session.id}`}
               class={`block px-4 py-2 text-gray-600 hover:bg-blue-50 ${activeSession === session.id ? 'bg-blue-50' : ''}`}
             >
-              <div class="font-['Playfair_Display']">{session.tagline}</div>
-              <div class="text-sm text-gray-500">{session.name}</div>
+              <div class="font-['Playfair_Display']">{session.name}</div>
+              <div class="text-sm text-gray-500">{session.tagline}</div>
             </a>
           </li>
         ))}

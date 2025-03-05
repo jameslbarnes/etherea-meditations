@@ -4,54 +4,53 @@ import Card from '../components/ui/Card.astro';
 import { sessionData } from '../data/sessions';
 
 export function getStaticPaths() {
-  return Object.keys(sessionData).map(session => ({
-    params: { session }
+  return Object.keys(sessionData).map(key => ({
+    params: { session: key },
   }));
 }
 
 const { session } = Astro.params;
-const currentSession = sessionData[session];
+const currentSession = sessionData[session as keyof typeof sessionData];
 
 if (!currentSession) {
   return Astro.redirect('/404');
 }
 ---
 
-<MainLayout title={`${session} Meditation`} activeSession={session}>
+<MainLayout title={`${currentSession.name}'s Reflection - Men's Group February`} activeSession={session} showSidebar={true}>
   <div class="min-h-screen bg-[#faf9f7] dark:bg-[#1a1a1a] relative overflow-hidden transition-colors duration-700">
-    <div class="max-w-3xl mx-auto px-6 py-20">
+    <div class="max-w-5xl mx-auto px-6 py-20 relative z-10">
       <!-- Header -->
-      <div class="text-center mb-16">
-        <span class="block text-sm uppercase tracking-[0.2em] text-[#94908d] dark:text-[#666] mb-4">
-          A Mindful Journey
-        </span>
-        <h1 class="text-4xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light tracking-tight leading-tight mb-3">
-          {currentSession.tagline}
-        </h1>
-        <p class="text-lg text-[#666] dark:text-[#999] font-light">
-            {currentSession.name}
-        </p>
-      </div>
-
-      <!-- Main Image and Visualization Caption -->
-      <div class="mb-16">
-        <div class="relative overflow-hidden rounded-lg">
+      <div class="text-center mb-12">
+        <div class="mb-6 relative mx-auto max-w-2xl overflow-hidden rounded-lg">
           <img 
             src={currentSession.image} 
-            alt={`Meditation for ${currentSession.name}`}
-            class="w-full aspect-[3/2] object-cover"
+            alt={`${currentSession.name}'s Meditation`}
+            class="w-full object-cover aspect-[3/2]"
           />
         </div>
-        <p class="mt-4 text-md text-[#666] dark:text-[#999] font-light leading-relaxed italic text-center">
-          {currentSession.visualization}
+        
+        <h1 class="text-3xl md:text-4xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light tracking-tight mb-4">
+          {currentSession.name}'s Intentions
+        </h1>
+        <p class="text-lg text-[#94908d] dark:text-[#888] italic">
+          {currentSession.tagline}
         </p>
       </div>
-
+      
       <!-- Content -->
       <div class="space-y-16 max-w-2xl mx-auto">
+        <!-- February Experience -->
+        <div class="space-y-4">
+          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">February Experience</h2>
+          <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
+            {currentSession.februaryExperience}
+          </p>
+        </div>
+        
         <!-- Intention -->
         <div class="space-y-4">
-          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">{currentSession.name}'s Intention</h2>
+          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Intentions</h2>
           <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
             {currentSession.intention}
           </p>
@@ -59,7 +58,7 @@ if (!currentSession) {
 
         <!-- Meditation -->
         <div class="space-y-4">
-          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">{currentSession.name}'s Meditation</h2>
+          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Personalized Meditation</h2>
           <div class="space-y-6">
             {currentSession.meditation.map(paragraph => (
               <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">

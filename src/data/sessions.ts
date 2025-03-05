@@ -5,6 +5,7 @@ export type SessionData = {
       date: string;
       time: string;
       image: string;
+      februaryExperience: string;
       intention: string;
       visualization: string;
       meditation: string[];
@@ -12,156 +13,117 @@ export type SessionData = {
   };
   
   export const sessionData: SessionData = {
-   
-  gal: {
-    name: "Gal",
-    tagline: "Build stages for hundreds",
-    date: "Sunday, January 5",
-    time: "7:00pm – 9:30pm",
-    image: "https://cdn.midjourney.com/f26f28d3-4fa4-4035-b4cd-1af9ccd1e597/0_2.png",
-    intention: "I intend to challenge myself to be witnessed and go first. In 2025, I will build stages for hundreds of people and facilitate groups for hundreds of people. I will own my power, stop playing small, and do things that scare me even when I don't feel ready.",
-    visualization: "Ancient amphitheater transforming into futuristic stage, hundreds of silhouettes in audience, figure standing center stage emanating power, cosmic energy streams, architectural grandeur, volumetric light",
-    meditation: [
-      "Breathe deeply and see yourself standing at the threshold of an ancient amphitheater. Feel the stone beneath your feet, solid and grounding. With each breath, the amphitheater begins to transform, ancient stone flowing into curves of light and possibility.",
-      "Hundreds of seats rise before you, each one representing a life you'll touch, a person you'll guide, a heart you'll open. Feel the familiar flutter of fear in your stomach - but notice how it dances with excitement, with possibility.",
-      "Step forward. Even before you feel ready. Especially before you feel ready. Feel your power rising not from the absence of fear, but from your willingness to move with it, to let it fuel you rather than stop you.",
-      "The stage is yours. The time is yours. Your voice carries the weight of wisdom and the lightness of truth. You are not playing small anymore - you are expanding into the fullness of who you've always been."
-    ]
-  },
-  ari: {
-    name: "Ari",
-    tagline: "Mindset of contentment",
-    date: "Sunday, January 5",
-    time: "7:00pm – 9:30pm",
-    image: "https://cdn.midjourney.com/608c5952-87e8-48d8-aed5-95f91221ad22/0_0.png",
-    intention: "I send the intention to keep a mindset of satisfaction, contentment, plentitude, gratitude, and sufficiency.",
-    visualization: "Zen garden with floating symbols of abundance, lotus flowers blooming in golden light, peaceful meditation space, gratitude manifesting as gentle particles, soft morning mist, contentment embodied",
-    meditation: [
-      "Settle into your breath and imagine yourself in a garden of infinite abundance. Each breath draws in the scent of contentment, each exhale releases any need to grasp or strain. Notice how the air itself feels rich with satisfaction.",
-      "Let your awareness rest on the completeness of this moment. Everything you need is already here. Sufficiency surrounds you like a gentle mist, seeping into every cell. You don't need to reach or strive - only to recognize what already is.",
-      "Feel gratitude rising naturally, like morning dew. Let plentitude fill you until it overflows, creating ripples of contentment that extend far beyond you. In this garden of enough-ness, every breath is a gift, every moment complete.",
-      "This is your natural state - not striving for more, but resting in the deep knowing that you are, and have, enough."
-    ]
-  },
-  anthony: {
-    name: "Anthony",
-    tagline: "Love, empowerment, growth",
-    date: "Sunday, January 5",
-    time: "7:00pm – 9:30pm",
-    image: "https://cdn.midjourney.com/515a32cb-827a-4faf-ac44-8e9d25783598/0_2.png",
-    intention: "My intention centers on three words: Love, empowerment, and growth. Love - with an open heart chakra guiding all decisions. Empowerment - recognizing patterns of diminishing my power for others, especially with younger siblings. Growth - embracing that life is about making mistakes, learning from them, and keeping going.",
-    visualization: "Triptych of illuminated heart chakra, phoenix rising, and spiral growth pattern, sacred geometry, flowing energy, healing light, transformative journey, mystical realism",
-    meditation: [
-      "Settle into your breath and visualize three sacred doorways before you. The first glows with the warm rose light of love, the second pulses with the fierce blue flame of power, and the third spirals with the green energy of growth.",
-      "Step through the doorway of love. Feel your heart chakra opening like a flower at dawn, its light guiding every choice, every step, every moment. Let this light show you how to move through the world with an open heart.",
-      "Now enter the doorway of power. See those old patterns where your light dimmed for others. Watch them dissolve like morning mist. Your power doesn't diminish others - it inspires them. Reclaim it, breath by breath.",
-      "Finally, walk through the doorway of growth. Every mistake, every misstep, every moment of learning glows like a star in your path. These aren't failures - they're the very steps that make your journey unique. Honor them."
-    ]
-  },
-  diana: {
-    name: "Diana",
-    tagline: "Mako Lako TED talk",
-    date: "Sunday, January 5",
-    time: "7:00pm – 9:30pm",
-    image: "https://cdn.midjourney.com/86d639e5-884b-4e92-8b9e-a298fcf7f559/0_0.png",
-    intention: "In 2025, I will give my TED talk 'Mako Lako - From Where to Where' and turn it into a book, then a screenplay. This year is about letting go of whatever doesn't serve me, especially limiting thoughts and people. I will solidify my name in the TV and film world.",
-    visualization: "Ancient Aramaic letters floating in space transforming into modern screenplay pages, cinematic lighting, symbolic doorways opening, release of shadows, professional film set atmosphere",
-    meditation: [
-      "Breathe deeply and see ancient Aramaic letters floating before you, each one carrying the weight of centuries. Watch as they begin to dance and transform, becoming the words of your story, your truth, your message to the world.",
-      "'Mako lako' - from where to where. Feel yourself standing at this sacred threshold. Behind you, release what no longer serves - watch limiting thoughts and outdated relationships dissolve like shadows in the dawn. Before you lies the path of your deepest truth.",
-      "Your story is becoming a bridge - from TED stage to book to screen. With each breath, see your vision expanding, touching more lives, creating more light. The industry's doors are opening, recognizing the unique gift only you can bring.",
-      "You are not just telling a story - you are becoming the story that others need to hear."
-    ]
-  },
-  camille: {
-    name: "Camille",
-    tagline: "Presence and positivity",
-    date: "Sunday, January 5",
-    time: "7:00pm – 9:30pm",
-    image: "https://cdn.midjourney.com/4edeff7f-e726-4bd0-b98f-fde6b913701b/0_2.png",
-    intention: "In 2025, I will bring presence, energy, and positivity to everything I do and everyone I meet. Presence away from distraction, presence in the world, and creating freely without care for judgments.",
-    visualization: "Dancing figure in pure light creating art from movement, zero gravity paint splashes, freedom of expression, joyful abandon, no boundaries, ethereal energy",
-    meditation: [
-      "Settle into this moment and feel presence washing over you like a warm light. Let each breath draw you deeper into the now, away from the scattered energies of distraction. You are here. Only here.",
-      "Feel energy beginning to pulse through you, pure and positive. It doesn't need to be channeled or controlled - only witnessed and shared. Your very presence is a gift to every space you enter, every person you meet.",
-      "Now let yourself create. No judgment, no hesitation, no second-guessing. Watch as your energy flows into pure expression. There is no right or wrong here - only the authentic movement of your spirit into form.",
-      "You are not performing presence - you are presence itself, dancing into being."
-    ]
-  },
-  speaker7: {
-    name: "Speaker 7",
-    tagline: "Extending boundaries",
-    date: "Sunday, January 5",
-    time: "7:00pm – 9:30pm",
-    image: "https://cdn.midjourney.com/65e80d7d-6d61-4e29-b9d1-3467865dfc08/0_3.png",
-    intention: "For 2025, my intention is extension - extending my creative boundaries, extending self-love, and extending play and fun beyond the business of things.",
-    visualization: "Expanding mandala of creativity, boundaries dissolving into playful patterns, inner child energy, cosmic playground, sacred geometry meets spontaneous joy, infinite expansion",
-    meditation: [
-      "Breathe deeply and feel your edges beginning to soften. Watch as your creative boundaries extend like ripples on still water, reaching further than you've ever allowed before. There is no limit to how far you can expand.",
-      "Feel self-love growing within you, extending through every cell, every thought, every moment. Like a flower reaching for the sun, you naturally grow toward what nourishes you.",
-      "Now let playfulness bubble up through the serious surfaces of life. Watch as it transforms everything it touches. Business becomes adventure. Work becomes play. Limitation becomes invitation.",
-      "You are not bound by old definitions. You are eternally extending into new possibilities."
-    ]
-  },
-  michelle: {
-    name: "Michelle",
-    tagline: "Service and light",
-    date: "Sunday, January 5",
-    time: "7:00pm – 9:30pm",
-    image: "https://cdn.midjourney.com/6a8d69f1-a382-4792-a99d-488225cf9164/0_2.png",
-    intention: "In 2025, I commit to being of service to the community and putting more light in the world. The world needs more light.",
-    visualization: "Hands offering light to community, rippling effect of illumination spreading through darkness, sacred service, healing energy, community gathering space, hope manifesting",
-    meditation: [
-      "Breathe deeply and feel yourself becoming a vessel of light. With each inhale, divine radiance fills you. With each exhale, it flows through you into a world that deeply needs it. You are not creating this light - you are allowing it to move through you in service.",
-      "See your community spread before you like a tapestry of interconnected lights. Each person you touch becomes a new point of illumination. Watch as the light ripples outward, touching lives you may never know, creating change you may never see.",
-      "Feel the joy of being in service - not from depletion or obligation, but from the natural overflow of your own light. The more you give, the more flows through you. The more you share, the brighter you become.",
-      "You are not just bringing light to the world - you are helping others remember their own light."
-    ]
-  },
-  speaker9: {
-    name: "Speaker 9",
-    tagline: "Listen to myself",
-    date: "Sunday, January 5",
-    time: "7:00pm – 9:30pm",
-    image: "https://cdn.midjourney.com/823b2dde-a6b0-4e8a-bb11-8fd24a274e7d/0_1.png",
-    intention: "In 2025, I will listen to myself and stop comparing myself to others' expectations - whether from society, family, or friends. This means leaving my desk job, perhaps for another desk where I enjoy the work more, or maybe traveling, dancing, and speaking other languages.",
-    visualization: "Empty office desk with chair transforming into butterfly wings, passport pages becoming birds, global dance floor emerging from corporate space, liberation energy, magical realism",
-    meditation: [
-      "Take a deep breath and see yourself sitting at that familiar desk. Feel the weight of expectations - from society, family, friends - settling around you like a heavy cloak. Now, with each breath, watch that weight begin to dissolve.",
-      "Listen deeply. Beneath the noise of shoulds and musts, your own voice is rising. It speaks of distant horizons, of dance floors in foreign cities, of words in new tongues. It speaks of a life that makes your soul sing.",
-      "Watch as your desk chair sprouts wings, becoming a vehicle of transformation. The walls of your office dissolve into open sky. Your computer screen becomes a window to endless possibility.",
-      "You are not abandoning responsibility - you are responding to your highest calling."
-    ]
-  },
-  ashley: {
-    name: "Ashley",
-    tagline: "The unthought known",
-    date: "Sunday, January 5",
-    time: "7:00pm – 9:30pm",
-    image: "https://cdn.midjourney.com/dc83386e-fd7f-4328-820b-0dc11e4462e3/0_1.png",
-    intention: "I intend to stay in touch with the unthought known - what my body knows without overthinking. I will follow my body's signals about what is safe, what isn't safe, what is inspiring, and what I want more of.",
-    visualization: "Human figure made of flowing energy responding to invisible currents, body wisdom depicted as light patterns, intuitive knowing, sacred nervous system, cellular intelligence",
-    meditation: [
-      "Settle into your breath and feel the deep wisdom of your body awakening. Your cells hold ancient knowledge that needs no words, no analysis, no overthinking. With each breath, sink deeper into this knowing.",
-      "Feel the subtle signals your body constantly sends - the quiet yes, the gentle no, the subtle maybe. Notice how your body responds to safety with expansion, to danger with contraction, to inspiration with energy.",
-      "Let your analytical mind rest in the background. Your body knows the way forward. It knows what brings you alive, what dims your light, what calls you toward growth. Trust these signals as they arise.",
-      "You are not learning this wisdom - you are remembering it."
-    ]
-  },
-  juanita: {
-    name: "Juanita",
-    tagline: "Building connections",
-    date: "Sunday, January 5",
-    time: "7:00pm – 9:30pm",
-    image: "https://cdn.midjourney.com/3200202d-aeb3-4d6e-90bb-0f0a8dd0d38f/0_1.png",
-    intention: "I want to build a strong foundation like an Aztec pyramid, square on top, with overflowing plants. From there, a rocket ship will combine the cosmos with Earth, exploring future connections between everyone, using technology to improve those connections.",
-    visualization: "Aztec pyramid with lush vegetation growing from steps, rocket launching from top platform, cosmic connections depicted as sacred geometry, future tech meets ancient wisdom, mystical sci-fi",
-    meditation: [
-      "Breathe deeply and feel yourself becoming a living pyramid, your base rooted deep in the Earth, your peak reaching toward the stars. Feel the strength of this foundation - solid, unshakeable, eternal.",
-      "Watch as lush life begins to grow from every level of your being. Plants cascade down your steps, each one representing the abundance that flows from true stability. Your solidity doesn't restrict growth - it enables it.",
-      "From your square peak, a rocket of possibility launches toward the cosmos. Feel how you bridge Earth and sky, ancient and future, stability and expansion. Technology isn't separate from nature - it's another way we reach for connection.",
-      "You are not just building a foundation - you are creating a launch pad for humanity's next evolution"
-    ]
-  }
+    james: {
+      name: "James",
+      tagline: "Seeing reality clearly",
+      date: "February, 2024",
+      time: "Men's Group Meeting",
+      image: "https://cdn.midjourney.com/45f33bcb-98dd-470a-8539-ce08b3e5160d/0_1.png",
+      februaryExperience: "James experienced a month of tremendous trust in himself and the universe despite challenges. He had a creative and energetic period in New York, utilizing his space in Meatpacking District for events and launching his livestream company. He met someone named Adina and began seeing her. Though his bank account became depleted and he had to leave New York to stay with his parents, he viewed this transition with perspective, feeling proud of how authentically he showed up. James got a new tattoo with the Sanskrit word \"asto\" (from untruth) before leaving, symbolizing his desire for a deeper relationship with reality.",
+      intention: "I intend to focus on seeing reality more clearly ('asto' - moving away from untruth). I want to recognize when opportunities would be bad for me in the long run and have the patience not to pursue them impulsively. I aim to find peace in stillness rather than constantly seeking peak experiences, while continuing to produce 'magic' in my life.",
+      visualization: "Sanskrit word 'asto' transforming into clear path forward, illusions dissolving, authentic presence emerging, stillness revealing hidden magic",
+      meditation: [
+        "James, visualize yourself standing at the threshold between untruth and clarity. Each breath clears away another layer of illusion. Feel that Sanskrit word 'asto' resonating within you.",
+        "Notice how, with each exhalation, you release one more expectation, one more assumption about how things should be. In stillness, you find the magic that has always been there - not in constant peaks, but in the gentle undulations of authentic presence.",
+        "You are learning that real creativity doesn't require constant movement; it thrives in the spaces between. Trust this process of coming home to truth."
+      ]
+    },
+    
+    andrew: {
+      name: "Andrew",
+      tagline: "Wellness, sobriety, and love",
+      date: "February, 2024",
+      time: "Men's Group Meeting",
+      image: "https://cdn.midjourney.com/4276d51a-962b-41ca-ba0d-27128b789282/0_3.png",
+      februaryExperience: "Andrew returned to New York after 2.5 months away, having recently ended a relationship with a woman he was dating in Mexico who wanted financial support. He's experiencing sadness about the breakup while settling back into New York routines. His part-time work ended in February, and he'll start new part-time work soon that pays about $4,000/month. Andrew describes himself as a \"poor man's power broker,\" oscillating between revolutionary ideas and financial insecurity. Despite the challenges, he's focusing on wellness, meditation, and sobriety, seeking out high-vibe communities that prioritize wellness activities.",
+      intention: "I want to find newer and different communities focused on wellness, meditation, and sobriety. I aim to make significant money (saving $1 million in 5 years) while maintaining my well-being. I'm committed to monogamous dating after realizing non-monogamy didn't resolve my restlessness. I seek love while maintaining the stillness and presence I cultivated during my time away.",
+      visualization: "Heart surrounded by healing community, meditation space transforming into financial abundance, path to wholeness through conscious choices",
+      meditation: [
+        "Andrew, place your hand on your heart and feel its steady rhythm. This steadiness exists within you, beyond any relationship, beyond any external validation.",
+        "As you breathe, acknowledge the wisdom you discovered in Costa Rica - that the search for 'more' is endless, but presence is always available. Feel how your natural state is one of balance.",
+        "Your journey toward monogamy is actually a journey toward wholeness within yourself. The love you seek externally already flows through you when you share your gifts of presence with others and now, increasingly, with yourself."
+      ]
+    },
+    
+    max: {
+      name: "Max",
+      tagline: "Sustainable balance",
+      date: "February, 2024",
+      time: "Men's Group Meeting",
+      image: "https://cdn.midjourney.com/067e2d2c-be05-4eb0-9d23-431366949b98/0_3.png",
+      februaryExperience: "Max had a busy month at work, taking on a leadership role with a new team doing front-end development. He often worked late into the evening after helping others during the day. The hard work paid off as he received a promotion, which was especially fulfilling as a self-taught developer who sometimes experiences imposter syndrome. Max traveled to Colombia with his girlfriend to celebrate her 30th birthday, where he obtained his open water diving certificate. He had time for self-reflection during this trip, waking up early and carving out time for himself.",
+      intention: "I want to create a more sustainable balance between work, self-care, and relationships. I aim to carve out dedicated time in the mornings to work out and evenings to read, cook, and spend time with friends. I want to shorten the margin between the three cornerstones of my life (self-care, work, and relationships) to create a more balanced and sustainable lifestyle while maintaining my professional momentum.",
+      visualization: "Flowing river branching into three balanced streams, each nourishing different aspects of life, energy in perfect equilibrium",
+      meditation: [
+        "Max, imagine your energy as a flowing river. Until now, this river has sometimes rushed forcefully in one direction, creating imbalance. With each breath, visualize this river branching naturally, nourishing all aspects of your life - your work, your relationships, your self-care.",
+        "Feel the satisfaction of your promotion as evidence of your capability. The balance you seek isn't about perfect equality every day but about honoring each aspect of your life in its season.",
+        "Your relationship flourishes when you're fulfilled, and you're fulfilled when you honor all parts of yourself."
+      ]
+    },
+    
+    mike: {
+      name: "Mike",
+      tagline: "Presence through transition",
+      date: "February, 2024",
+      time: "Men's Group Meeting",
+      image: "https://cdn.midjourney.com/7cf8143b-c8f4-415e-b63d-4cfacee7605b/0_2.png",
+      februaryExperience: "Mike broke his rib at the beginning of February, which limited his ability to exercise - a key mood regulation tool for him. He spent much time at his parents' house, experiencing sadness but finding it \"welcomed\" as part of a grieving process. He went on a few dates with a woman but knew she wasn't right for him, yet found himself repeatedly reconnecting with her before she eventually ended things. Mike has been feeling into the concept of \"sacrifice without martyrdom\" as he prepares for significant life changes, including leaving his apartment with Geraldine and becoming nomadic again.",
+      intention: "I want to show up with presence for the transitions ahead, especially as I prepare to leave for a Zen Mountain Monastery where I'll participate in intense meditation retreats. I intend to embrace the structure of monastery life (\"the warm hug of death of the schedule\") while continuing my meditation teaching work. I aim to maintain patience with my father, with whom I'm developing a deeper connection as I see and hold space for his father's \"little boy\" and associated fears and anxieties.",
+      visualization: "Monastery gates opening to reveal structured freedom, transitional spaces between worlds, patience embodied as warm light",
+      meditation: [
+        "Mike, as you prepare for significant transitions, breathe into the space of surrender. Feel the liberation in consciously choosing sacrifice without martyrdom. Each breath strengthens your capacity to be present with change.",
+        "The monastery schedule you describe as 'the warm hug of death' is actually teaching you that structure creates freedom. As you hold space for your father's inner child, recognize that you're also holding space for your own.",
+        "The patience you've cultivated is a gift that will serve you through every transition. Trust that nomadic or rooted, you carry home within you."
+      ]
+    },
+    
+    seth: {
+      name: "Seth",
+      tagline: "Integration and self-commitment",
+      date: "February, 2024",
+      time: "Men's Group Meeting",
+      image: "https://cdn.midjourney.com/99337a70-159d-425c-bd9f-87cd1e7d8abf/0_2.png",
+      februaryExperience: "Seth has been navigating the aftermath of a manic episode that occurred at the end of January. He's been observing his different perspectives in various mental states and working to reconcile them to find what's true. He finds the blind spots he has when completely sober particularly concerning. Seth is preparing for a trip to India in three weeks, which he agreed to during his manic state but isn't currently excited about. He recently returned from a family ski trip in Colorado, where he reconnected with his father and brother Logan, with whom his relationship has improved.",
+      intention: "I want to do things for myself, specifically getting back into yoga to prepare for my upcoming retreat in India and taking Zouk dance classes. I also aim to cut back on cannabis use, particularly while traveling. I'm trying to be more open-minded in dating, exploring connections with people I might not have considered before. My overall goal is to follow through on commitments to myself and explore activities that bring me fulfillment beyond my normal routines.",
+      visualization: "Different perspectives merging into unified whole, yoga poses transitioning into dance movements, self-promises manifesting as tangible paths",
+      meditation: [
+        "Seth, place awareness on the different perspectives within you - the manic energy, the questioning mind, the still observer. Breathe space around each of these aspects, honoring their wisdom while not identifying completely with any single perspective.",
+        "With each breath, feel yourself integrating these fragments into a more cohesive whole. Your commitment to following through on promises to yourself - the yoga, the dance classes - is building self-trust.",
+        "As you prepare for India, know that your journey there was set in motion by a part of you that recognized something you needed. Trust the process of becoming more whole."
+      ]
+    },
+    
+    david: {
+      name: "David",
+      tagline: "Grounded purpose",
+      date: "February, 2024",
+      time: "Men's Group Meeting",
+      image: "https://cdn.midjourney.com/96cc5a50-7920-4022-971a-d9fb2ea076e1/0_1.png",
+      februaryExperience: "David spent the entire month traveling with his partner Andrea, leaving him feeling somewhat burnt out both physically and mentally. His company was acquired after a year of discussions, and while he was well-received by the new ownership, he learned many of his colleagues will be let go. He's feeling pressure to deliver results in a challenging market (carbon project development in the forestry space). Despite the work stress, his relationship with Andrea is progressing well - she met his various parents during their travels, and they're looking forward to establishing a home base in New York.",
+      intention: "I aim to find more stillness and mental grounding as I prepare for spring and beyond. I want to be intentional about any sacrifices I make for work, potentially being less social temporarily to make time for work and other hobbies. I'm processing concerns about American political identity and seeking ways to be more intentionally giving back on a daily basis, particularly as my partner Andrea (who is Mexican) faces immigration uncertainty in the current political climate.",
+      visualization: "Roots extending deep into earth while traveling, relationship foundation strengthening, conscious action creating ripples of positive change",
+      meditation: [
+        "David, visualize yourself planting roots even amidst movement. Your breath connects you to the earth beneath you, whether you're traveling or at home. Feel the grounding that comes from knowing your purpose and living your values.",
+        "As you navigate work pressure and political concerns, recognize that your foundation remains stable. Your relationship with Andrea flourishes because you both honor the balance between togetherness and individual expression.",
+        "As you seek more intentional ways of giving back, trust that your conscious awareness is already shifting the world around you. Your concern is itself a form of action."
+      ]
+    },
+    
+    justin: {
+      name: "Justin",
+      tagline: "Self-compassion and fulfillment",
+      date: "February, 2024",
+      time: "Men's Group Meeting",
+      image: "https://cdn.midjourney.com/2590358e-c89a-4e81-874e-df829277b5e0/0_2.png",
+      februaryExperience: "Justin describes February as feeling strangely \"still\" internally, despite actively building a routine, focusing on health, deepening friendships, and making new connections. He's experiencing a sense of unfulfillment and cognitive dissonance - even big events like his mother's health emergency (she was hospitalized but has recovered) didn't evoke the emotional depth he expected. Work is going well; his company raised a bridge round at a $60 million valuation, a significant increase from when he joined. He's working on exciting projects but feels an emptiness in his achievements.",
+      intention: "I want to find pleasure and fulfillment in being of service to myself, having recognized that I find activities like cooking much more gratifying when done for others than for myself alone. I'm seeking a passion project that genuinely excites me and learning to enjoy my accomplishments even when they're just for myself. I aim to find the same joy in self-care that I experience when caring for others.",
+      visualization: "Hands offering compassion to self, inner warmth radiating outward, giving and receiving becoming one unified movement",
+      meditation: [
+        "Justin, place your hands on your heart and stomach, connecting with your center. Feel the warmth generating from within you. As you breathe, imagine directing the same care, attention, and love that you give so freely to others back toward yourself.",
+        "Each exhale softens any resistance to receiving your own kindness. Your achievements are meaningful because you accomplished them, not because of how others perceive them. The passion you seek is already within you, waiting to be recognized.",
+        "The joy of cooking for yourself can be as rich as cooking for others when you view yourself as worthy of your own care. You are both the giver and receiver of your own compassion."
+      ]
     }
-    // ... rest of the sessions 
+  }
+
+// ... rest of the sessions 

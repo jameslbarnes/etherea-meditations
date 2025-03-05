@@ -3,28 +3,25 @@ import MainLayout from '../layouts/MainLayout.astro';
 import { sessionData } from '../data/sessions';
 ---
 
-<MainLayout title="Tea Party Memento" activeSession="" showSidebar={false}>
+<MainLayout title="Men's Group - Reflections & Intentions" activeSession="" showSidebar={false}>
   <div class="min-h-screen bg-[#faf9f7] dark:bg-[#1a1a1a] relative overflow-hidden transition-colors duration-700">
     <div class="max-w-5xl mx-auto px-6 py-20 relative z-10">
       <!-- Header -->
       <div class="max-w-2xl mx-auto text-center mb-20">
         <h1>
           <span class="block text-sm uppercase tracking-[0.2em] text-[#94908d] dark:text-[#666] mb-4">
-            A Mindful Journey
+            A Journey of Brotherhood
           </span>
           <span class="block text-4xl md:text-5xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light tracking-tight leading-tight">
-            Sipping Into the New Year
+            Men's Group Intentions
           </span>
         </h1>
         
         <div class="mt-12 text-[#666] dark:text-[#999]">
           <p class="text-lg font-light leading-relaxed">
-            To our amazing community, thank you for showing up with courage, grace, and creativity to this experience. As a thank you, we've created a collection of personalized meditations to help each of you bring forth your intentions for 2025.
+            As we continue our journey of growth, connection, and vulnerability, we've captured each of our experiences and intentions moving forward. This collection of personalized meditations serves as both a record of our journey and a guidepost for the path ahead.
           </p>
-          <p class="mt-8 font-light italic">
-            With gratitude,<br/>
-            <span class="signature text-xl mt-2 block">Hannah, Laura, and James</span>
-          </p>
+    
         </div>
       </div>
 
@@ -43,7 +40,7 @@ import { sessionData } from '../data/sessions';
                 <div class="absolute bottom-0 left-0 right-0 p-5">
                   <h2 class="text-white text-xl font-medium mb-2">{session.tagline}</h2>
                   <p class="text-white/90 text-sm font-light leading-relaxed">
-					{session.name}  
+                    {session.name}  
                   </p>
                 </div>
               </div>
