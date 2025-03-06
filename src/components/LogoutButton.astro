@@ -1,0 +1,17 @@
+<button 
+  id="logout-button" 
+  class="fixed top-4 right-4 z-40 px-3 py-1 rounded-md bg-white dark:bg-[#2a2a2a] shadow-md text-sm text-[#666] dark:text-[#999]"
+>
+  Logout
+</button>
+
+<script>
+  const logoutButton = document.getElementById('logout-button');
+  
+  if (logoutButton) {
+    logoutButton.addEventListener('click', () => {
+      localStorage.removeItem('authenticated');
+      window.location.reload();
+    });
+  }
+</script> 

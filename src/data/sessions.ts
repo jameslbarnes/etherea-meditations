@@ -16,7 +16,7 @@ export type SessionData = {
     james: {
       name: "James",
       tagline: "Seeing reality clearly",
-      date: "February, 2024",
+      date: "March, 2025",
       time: "Men's Group Meeting",
       image: "https://cdn.midjourney.com/45f33bcb-98dd-470a-8539-ce08b3e5160d/0_1.png",
       februaryExperience: "James experienced a month of tremendous trust in himself and the universe despite challenges. He had a creative and energetic period in New York, utilizing his space in Meatpacking District for events and launching his livestream company. He met someone named Adina and began seeing her. Though his bank account became depleted and he had to leave New York to stay with his parents, he viewed this transition with perspective, feeling proud of how authentically he showed up. James got a new tattoo with the Sanskrit word \"asto\" (from untruth) before leaving, symbolizing his desire for a deeper relationship with reality.",
@@ -32,7 +32,7 @@ export type SessionData = {
     andrew: {
       name: "Andrew",
       tagline: "Wellness, sobriety, and love",
-      date: "February, 2024",
+      date: "March, 2025",
       time: "Men's Group Meeting",
       image: "https://cdn.midjourney.com/4276d51a-962b-41ca-ba0d-27128b789282/0_3.png",
       februaryExperience: "Andrew returned to New York after 2.5 months away, having recently ended a relationship with a woman he was dating in Mexico who wanted financial support. He's experiencing sadness about the breakup while settling back into New York routines. His part-time work ended in February, and he'll start new part-time work soon that pays about $4,000/month. Andrew describes himself as a \"poor man's power broker,\" oscillating between revolutionary ideas and financial insecurity. Despite the challenges, he's focusing on wellness, meditation, and sobriety, seeking out high-vibe communities that prioritize wellness activities.",
@@ -48,7 +48,7 @@ export type SessionData = {
     max: {
       name: "Max",
       tagline: "Sustainable balance",
-      date: "February, 2024",
+      date: "March, 2025",
       time: "Men's Group Meeting",
       image: "https://cdn.midjourney.com/067e2d2c-be05-4eb0-9d23-431366949b98/0_3.png",
       februaryExperience: "Max had a busy month at work, taking on a leadership role with a new team doing front-end development. He often worked late into the evening after helping others during the day. The hard work paid off as he received a promotion, which was especially fulfilling as a self-taught developer who sometimes experiences imposter syndrome. Max traveled to Colombia with his girlfriend to celebrate her 30th birthday, where he obtained his open water diving certificate. He had time for self-reflection during this trip, waking up early and carving out time for himself.",
@@ -64,7 +64,7 @@ export type SessionData = {
     mike: {
       name: "Mike",
       tagline: "Presence through transition",
-      date: "February, 2024",
+      date: "March, 2025",
       time: "Men's Group Meeting",
       image: "https://cdn.midjourney.com/7cf8143b-c8f4-415e-b63d-4cfacee7605b/0_2.png",
       februaryExperience: "Mike broke his rib at the beginning of February, which limited his ability to exercise - a key mood regulation tool for him. He spent much time at his parents' house, experiencing sadness but finding it \"welcomed\" as part of a grieving process. He went on a few dates with a woman but knew she wasn't right for him, yet found himself repeatedly reconnecting with her before she eventually ended things. Mike has been feeling into the concept of \"sacrifice without martyrdom\" as he prepares for significant life changes, including leaving his apartment with Geraldine and becoming nomadic again.",
@@ -80,7 +80,7 @@ export type SessionData = {
     seth: {
       name: "Seth",
       tagline: "Integration and self-commitment",
-      date: "February, 2024",
+      date: "March, 2025",
       time: "Men's Group Meeting",
       image: "https://cdn.midjourney.com/99337a70-159d-425c-bd9f-87cd1e7d8abf/0_2.png",
       februaryExperience: "Seth has been navigating the aftermath of a manic episode that occurred at the end of January. He's been observing his different perspectives in various mental states and working to reconcile them to find what's true. He finds the blind spots he has when completely sober particularly concerning. Seth is preparing for a trip to India in three weeks, which he agreed to during his manic state but isn't currently excited about. He recently returned from a family ski trip in Colorado, where he reconnected with his father and brother Logan, with whom his relationship has improved.",
@@ -96,7 +96,7 @@ export type SessionData = {
     david: {
       name: "David",
       tagline: "Grounded purpose",
-      date: "February, 2024",
+      date: "March, 2025",
       time: "Men's Group Meeting",
       image: "https://cdn.midjourney.com/96cc5a50-7920-4022-971a-d9fb2ea076e1/0_1.png",
       februaryExperience: "David spent the entire month traveling with his partner Andrea, leaving him feeling somewhat burnt out both physically and mentally. His company was acquired after a year of discussions, and while he was well-received by the new ownership, he learned many of his colleagues will be let go. He's feeling pressure to deliver results in a challenging market (carbon project development in the forestry space). Despite the work stress, his relationship with Andrea is progressing well - she met his various parents during their travels, and they're looking forward to establishing a home base in New York.",
@@ -112,7 +112,7 @@ export type SessionData = {
     justin: {
       name: "Justin",
       tagline: "Self-compassion and fulfillment",
-      date: "February, 2024",
+      date: "March, 2025",
       time: "Men's Group Meeting",
       image: "https://cdn.midjourney.com/2590358e-c89a-4e81-874e-df829277b5e0/0_2.png",
       februaryExperience: "Justin describes February as feeling strangely \"still\" internally, despite actively building a routine, focusing on health, deepening friendships, and making new connections. He's experiencing a sense of unfulfillment and cognitive dissonance - even big events like his mother's health emergency (she was hospitalized but has recovered) didn't evoke the emotional depth he expected. Work is going well; his company raised a bridge round at a $60 million valuation, a significant increase from when he joined. He's working on exciting projects but feels an emptiness in his achievements.",
