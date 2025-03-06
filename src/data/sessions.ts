@@ -88,7 +88,7 @@ export const sessionData: SessionData = {
     image: "https://cdn.midjourney.com/7cf8143b-c8f4-415e-b63d-4cfacee7605b/0_2.png",
     months: {
       february2025: {
-        experience: "Mike broke his rib at the beginning of February, which limited his ability to exercise - a key mood regulation tool for him. He spent much time at his parents' house, experiencing sadness but finding it \"welcomed\" as part of a grieving process. He went on a few dates with a woman but knew she wasn't right for him, yet found himself repeatedly reconnecting with her before she eventually ended things."
+        experience: "Mike broke his rib at the beginning of February, which limited his ability to exercise - a key mood regulation tool for him. He spent much time at his parents' house, experiencing sadness but finding it \"welcomed\" as part of a grieving process. He went on a few dates with a woman but knew she wasn't right for him, yet found himself repeatedly reconnecting with her before she eventually ended things. Mike has been feeling into the concept of 'sacrifice without martyrdom' as he prepares for significant life changes, including leaving his apartment with Geraldine and becoming nomadic again."
       },
       march2025: {
         intention: "I want to show up with presence for the transitions ahead, especially as I prepare to leave for a Zen Mountain Monastery where I'll participate in intense meditation retreats. I intend to embrace the structure of monastery life (\"the warm hug of death of the schedule\") while continuing my meditation teaching work. I aim to maintain patience with my father, with whom I'm developing a deeper connection as I see and hold space for his father's \"little boy\" and associated fears and anxieties.",
