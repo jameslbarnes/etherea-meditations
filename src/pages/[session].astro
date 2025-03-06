@@ -17,7 +17,7 @@ if (!currentSession) {
 }
 ---
 
-<MainLayout title={`${currentSession.name}'s Reflection - Men's Group February`} activeSession={session} showSidebar={true}>
+<MainLayout title={`${currentSession.name}'s Reflection - Men's Group`} activeSession={session} showSidebar={true}>
   <div class="min-h-screen bg-[#faf9f7] dark:bg-[#1a1a1a] relative overflow-hidden transition-colors duration-700">
     <div class="max-w-5xl mx-auto px-6 py-20 relative z-10">
       <!-- Header -->
@@ -31,42 +31,69 @@ if (!currentSession) {
         </div>
         
         <h1 class="text-3xl md:text-4xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light tracking-tight mb-4">
-          {currentSession.name}'s Intentions
+          {currentSession.name}'s Journey
         </h1>
         <p class="text-lg text-[#94908d] dark:text-[#888] italic">
-          {currentSession.tagline}
+          Current intention: {currentSession.tagline}
         </p>
       </div>
       
       <!-- Content -->
       <div class="space-y-16 max-w-2xl mx-auto">
-        <!-- February Experience -->
-        <div class="space-y-4">
-          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">February Experience</h2>
-          <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
-            {currentSession.februaryExperience}
-          </p>
-        </div>
-        
-        <!-- Intention -->
-        <div class="space-y-4">
-          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Intentions</h2>
-          <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
-            {currentSession.intention}
-          </p>
-        </div>
-
-        <!-- Meditation -->
-        <div class="space-y-4">
-          <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Personalized Meditation</h2>
+        <!-- March Section (showing first - reverse chronological) -->
+        {currentSession.months.march2025 && (
           <div class="space-y-6">
-            {currentSession.meditation.map(paragraph => (
-              <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
+            <div class="flex items-center justify-center">
+              <div class="flex-grow h-px bg-gray-300 dark:bg-gray-700 max-w-xs"></div>
+              <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light px-4">March 2025</h2>
+              <div class="flex-grow h-px bg-gray-300 dark:bg-gray-700 max-w-xs"></div>
+            </div>
+            
+            {currentSession.months.march2025.intention && (
+              <div class="space-y-4">
+                <h3 class="text-xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Intention</h3>
+                <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
+                  {currentSession.months.march2025.intention}
+                </p>
+              </div>
+            )}
+            
+            {currentSession.months.march2025.meditation && (
+              <div class="space-y-4">
+                <h3 class="text-xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Meditation</h3>
+                <div class="space-y-6">
+                  {currentSession.months.march2025.meditation.map(paragraph => (
+                    <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
-        </div>
+        )}
+
+        <!-- February Section -->
+        {currentSession.months.february2025 && (
+          <div class="space-y-6">
+            <div class="flex items-center justify-center">
+              <div class="flex-grow h-px bg-gray-300 dark:bg-gray-700 max-w-xs"></div>
+              <h2 class="text-2xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light px-4">February 2025</h2>
+              <div class="flex-grow h-px bg-gray-300 dark:bg-gray-700 max-w-xs"></div>
+            </div>
+            
+            {currentSession.months.february2025.experience && (
+              <div class="space-y-4">
+                <h3 class="text-xl text-[#2d2d2d] dark:text-[#f0f0f0] font-light">Reflection</h3>
+                <p class="text-lg text-[#666] dark:text-[#999] font-light leading-relaxed">
+                  {currentSession.months.february2025.experience}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
+        
+        <!-- Future months can be added here using the same pattern -->
       </div>
     </div>
   </div>

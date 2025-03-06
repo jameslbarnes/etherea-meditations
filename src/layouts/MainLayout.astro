@@ -12,13 +12,13 @@ interface Props {
 const { title, activeSession, showSidebar = true } = Astro.props;
 
 const sessions = [
-  { id: 'james', name: 'James', tagline: 'Seeing reality clearly', date: sessionData.james.date },
-  { id: 'andrew', name: 'Andrew', tagline: 'Wellness, sobriety, and love', date: sessionData.andrew.date },
-  { id: 'max', name: 'Max', tagline: 'Sustainable balance', date: sessionData.max.date },
-  { id: 'mike', name: 'Mike', tagline: 'Presence through transition', date: sessionData.mike.date },
-  { id: 'seth', name: 'Seth', tagline: 'Integration and self-commitment', date: sessionData.seth.date },
-  { id: 'david', name: 'David', tagline: 'Grounded purpose', date: sessionData.david.date },
-  { id: 'justin', name: 'Justin', tagline: 'Self-compassion and fulfillment', date: sessionData.justin.date },
+  { id: 'james', name: 'James', tagline: 'Seeing reality clearly', date: 'March, 2025' },
+  { id: 'andrew', name: 'Andrew', tagline: 'Wellness, sobriety, and love', date: 'March, 2025' },
+  { id: 'max', name: 'Max', tagline: 'Sustainable balance', date: 'March, 2025' },
+  { id: 'mike', name: 'Mike', tagline: 'Presence through transition', date: 'March, 2025' },
+  { id: 'seth', name: 'Seth', tagline: 'Integration and self-commitment', date: 'March, 2025' },
+  { id: 'david', name: 'David', tagline: 'Grounded purpose', date: 'March, 2025' },
+  { id: 'justin', name: 'Justin', tagline: 'Self-compassion and fulfillment', date: 'March, 2025' },
 ];
 ---
 
@@ -81,7 +81,7 @@ const sessions = [
   <!-- Desktop Sidebar -->
   <aside class={`hidden md:block w-64 fixed inset-y-0 left-0 bg-white border-r border-gray-200 ${!showSidebar ? 'hidden' : ''}`}>
     <div class="p-4 bg-white border-b border-gray-200">
-      <h2 class="text-xl font-bold text-gray-800 font-['Playfair_Display']">Our Intentions</h2>
+      <h2 class="text-xl font-bold text-gray-800 font-['Playfair_Display']">Our Journeys</h2>
     </div>
     <nav>
       <ul class="space-y-1">
